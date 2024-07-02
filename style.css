@@ -1,0 +1,142 @@
+:root {
+  --color-text: #313131;
+  --color-text-white: #ffff;
+  --color-button-default: #1f1f1f;
+  --color-button-hover: #fbce51;
+  --font-family-1: "Merriweather";
+  --font-family-2: "Golos Text";
+  --color-background-ticker: #f54932;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1920px;
+}
+
+/* HEADER */
+
+.header {
+  background-image: url("./assets/background_header.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.header__logo {
+  background-image: url("./assets/logo.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 245px;
+  height: 35px;
+}
+
+.header__inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-top: 26px;
+  padding-bottom: 132px;
+}
+
+.header__inner-info {
+  max-width: 542px;
+}
+
+.header__title {
+  color: var(--color-text);
+  font-size: 60px;
+  font-family: var(--font-family-1);
+  font-weight: 400;
+  line-height: 110%;
+  text-transform: uppercase;
+  margin-top: 62px;
+}
+
+.header__title-2 {
+  text-align: center;
+}
+
+.header__description {
+  color: var(--color-text);
+  font-family: var(--font-family-2);
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.header__buttons {
+  display: flex;
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.header__button-black {
+  font-size: 18px;
+  color: var(--color-text-white);
+  font-family: var(--font-family-2);
+  background-color: var(--color-button-default);
+  border-radius: 66px;
+  border: none;
+  padding: 20px 49px;
+  transition: 0.3s all;
+}
+
+.header__button-black:hover {
+  background-color: var(--color-button-hover);
+  color: var(--color-button-default);
+}
+
+.header__button-transparent {
+  color: var(--color-text);
+  font-size: 18px;
+  padding: 20px 49px;
+  border-radius: 66px;
+  border: 1px solid var(--color-button-default);
+  background-color: transparent;
+  transition: 0.3s all;
+}
+
+.header__button-transparent:hover {
+  background-color: var(--color-button-default);
+  color: var(--color-text-white);
+}
+
+/* TICKER */
+
+/* .ticker {
+  width: 100%;
+  overflow: hidden;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  white-space: nowrap;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.ticker__wrapper {
+  display: flex;
+  animation: ticker 20s linear infinite;
+}
+
+.ticker__item {
+  display: inline-block;
+  padding: 0 2rem;
+  white-space: nowrap;
+}
+
+@keyframes ticker {
+  0% {
+      transform: translateX(100%);
+  }
+  100% {
+      transform: translateX(-100%);
+  }
+} */
+
