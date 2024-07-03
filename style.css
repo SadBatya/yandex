@@ -1,11 +1,14 @@
 :root {
   --color-text: #313131;
   --color-text-white: #ffff;
+  --color-text-red: #f54932;
   --color-button-default: #1f1f1f;
   --color-button-hover: #fbce51;
   --font-family-1: "Merriweather";
   --font-family-2: "Golos Text";
   --color-background-ticker: #f54932;
+  --color-border-table: #D0D0D0;
+  --color-text-href: #3057A2;
 }
 
 * {
@@ -37,7 +40,8 @@
 }
 
 .header__inner {
-  max-width: 1280px;
+  max-width: 1366px;
+  padding: 0 72px;
   margin: 0 auto;
   padding-top: 26px;
   padding-bottom: 132px;
@@ -84,6 +88,7 @@
   border: none;
   padding: 20px 49px;
   transition: 0.3s all;
+  cursor: pointer;
 }
 
 .header__button-black:hover {
@@ -99,6 +104,7 @@
   border: 1px solid var(--color-button-default);
   background-color: transparent;
   transition: 0.3s all;
+  cursor: pointer;
 }
 
 .header__button-transparent:hover {
@@ -140,3 +146,98 @@
   }
 } */
 
+/* MAIN */
+
+.main__container {
+  max-width: 1366px;
+  padding: 0 72px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.main__info {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.main__text {
+  font-family: var(--font-family-1);
+  color: var(--color-text);
+  font-size: 36px;
+  font-weight: 200;
+  text-transform: uppercase;
+  line-height: 135%;
+}
+
+.main__text-red {
+  color: var(--color-text-red);
+  font-weight: bold;
+}
+
+.main__photo img {
+  border-radius: 50%;
+}
+
+.main__table{
+  display: flex;
+  align-items: flex-start;
+  margin-top: 50px;
+}
+
+.main__table-img img{
+  width: 474px;
+}
+
+.main__table-info{
+  display: flex;
+  flex-direction: column;
+}
+
+.main__table-game{
+  display: flex;
+  margin-top: 60px;
+
+}
+
+.main__table-game-inner-keys{
+  font-family: var(--font-family-2);
+  font-size: 20px;
+  color: var(--color-text);
+  opacity: 70%;
+  border-right: 1px solid var(--color-border-table);
+}
+
+.main__table-info--inner-key--item{
+  padding: 16px 16px 16px 0;
+}
+
+.main__table-game-inner-values{
+  font-family: var(--font-family-2);
+  font-size: 20px;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.main__table-game--inner-value{
+  padding: 16px;
+}
+
+.main__table-info--inner-key--item{
+  border-bottom: 1px solid var(--color-border-table);
+}
+
+.main__table-game--inner-value{
+  border-bottom: 1px solid var(--color-border-table);
+}
+
+.item-5{
+  border: none;
+}
+
+.main__table-href{
+  color: var(--color-text-href);
+  font-family: var(--font-family-2);
+  margin-top: 30px;
+  font-size: 20px;
+}
