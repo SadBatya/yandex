@@ -4,6 +4,7 @@
   --color-text-red: #f54932;
   --color-button-default: #1f1f1f;
   --color-button-hover: #fbce51;
+  --color-button-disabled: #313131;
   --font-family-1: "Merriweather";
   --font-family-2: "Golos Text";
   --color-background-ticker: #f54932;
@@ -169,6 +170,7 @@
   padding: 0 72px;
   margin: 0 auto;
   margin-top: 100px;
+  margin-bottom: 140px;
 }
 
 .main__info {
@@ -356,28 +358,38 @@
   bottom: 0;
 }
 
-/* SLIDER SECTION */
+/* SLIDER */
 
 .slider {
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-rows: auto 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "title title buttons"
+    "slider slider slider";
   overflow: hidden;
+  position: relative;
 }
 
 .slider__title {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 60px;
-}
-
-.slider__title-text {
   font-size: 54px;
   color: var(--color-text);
   text-transform: uppercase;
+  grid-area: title;
+  margin-bottom: 60px;
+  white-space: nowrap;
+  align-self: flex-start;
 }
 
 .slider__title-buttons {
   display: flex;
   gap: 14px;
   align-items: center;
+  align-self: flex-start;
+  grid-area: buttons;
+  justify-content: flex-end;
+  margin-top: 5px;
 }
 
 .slider__title-button {
@@ -388,6 +400,7 @@
   cursor: pointer;
   position: relative;
   transition: 0.3s all;
+  border: none;
 }
 
 .slider__title-button:hover {
@@ -410,13 +423,22 @@
   transform: rotate(180deg);
 }
 
+.btn-left:disabled{
+  cursor: not-allowed;
+  background-color: var(--color-button-disabled);
+  opacity: 20%;
+}
+
+.btn-right:disabled{
+  cursor: not-allowed;
+  background-color: var(--color-button-disabled);
+  opacity: 20%;
+}
+
 .slider__title-number {
   font-size: 16px;
   font-family: var(--font-family-2);
   color: var(--color-text);
-}
-
-.slider__title-number-current {
 }
 
 .slider__title-number-all {
@@ -424,9 +446,15 @@
 }
 
 .slider__cards {
+  grid-area: slider;  
+  position: relative;
+}
+
+.slider__line{
   display: flex;
   align-items: flex-start;
   gap: 35px;
+  transition: .5s all;
 }
 
 .slider__card {
@@ -434,7 +462,7 @@
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  /* min-width: 394px; */
+  min-width: 394px;
 }
 
 .slider__card-img {
@@ -473,6 +501,8 @@
   background-color: var(--color-text-href);
   color: var(--color-text-white);
 }
+
+/* FOOTER */
 
 .footer {
   background-color: var(--color-bg-footer);
