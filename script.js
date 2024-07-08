@@ -21,7 +21,7 @@ function updateBtnStatus() {
 btnNext.addEventListener("click", () => {
   currentIndex++;
   curentNumberCard.textContent = currentIndex;
-  position += cardWidth + 35;
+  position += cardWidth + 20;
   sliderLine.style.transform = `translateX(-${position}px)`;
   updateBtnStatus();
 });
@@ -29,7 +29,7 @@ btnNext.addEventListener("click", () => {
 btnPrev.addEventListener("click", () => {
   currentIndex--;
   curentNumberCard.textContent = currentIndex;
-  position -= cardWidth + 35;
+  position -= cardWidth + 20;
   sliderLine.style.transform = `translateX(-${position}px)`;
   updateBtnStatus();
   console.log(position)

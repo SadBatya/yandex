@@ -20,7 +20,8 @@
 }
 
 .container {
-  /* max-width: 1920px; */
+  max-width: 1920px;
+  overflow: hidden;
 }
 
 /* HEADER */
@@ -55,16 +56,20 @@
 
 .header__title {
   color: var(--color-text);
-  font-size: 60px;
+  font-size: clamp(36px, 4vw, 60px);
   font-family: var(--font-family-1);
   font-weight: 400;
   line-height: 110%;
   text-transform: uppercase;
   margin-top: 62px;
+  margin-bottom: 25px;
 }
 
 .header__title-2 {
   text-align: center;
+}
+.header__title-3 {
+  text-align: end;
 }
 
 .header__description {
@@ -77,18 +82,19 @@
 
 .header__buttons {
   display: flex;
-  gap: 16px;
-  margin-top: 40px;
+  gap: 15px;
+  margin-top: 45px;
 }
 
 .header__button-black {
-  font-size: 18px;
+  width: 263px;
+  padding: 1rem 2.5rem;
+  font-size: 16px;
   color: var(--color-text-white);
   font-family: var(--font-family-2);
   background-color: var(--color-button-default);
   border-radius: 66px;
   border: none;
-  padding: 20px 49px;
   transition: 0.3s all;
   cursor: pointer;
 }
@@ -99,9 +105,13 @@
 }
 
 .header__button-transparent {
+  width: 263px;
+
+  padding: 1rem 5.5rem;
+  
   color: var(--color-text);
-  font-size: 18px;
-  padding: 20px 49px;
+  font-size: 16px;
+  
   border-radius: 66px;
   border: 1px solid var(--color-button-default);
   background-color: transparent;
@@ -169,7 +179,7 @@
   max-width: 1366px;
   padding: 0 72px;
   margin: 0 auto;
-  margin-top: 100px;
+  margin-top: 75px;
   margin-bottom: 140px;
 }
 
@@ -183,9 +193,10 @@
   font-family: var(--font-family-1);
   color: var(--color-text);
   font-size: 36px;
-  font-weight: 200;
+  font-weight: 400;
   text-transform: uppercase;
   line-height: 135%;
+  margin-top: 20px;
 }
 
 .main__text-red {
@@ -199,13 +210,15 @@
 
 .main__table {
   display: flex;
-  align-items: flex-start;
-  margin-top: 50px;
-  margin-bottom: 200px;
+  align-items: center;
+  margin-top: 35px;
+  margin-bottom: 180px;
+  margin-left: -27px;
+  gap: 15px;
 }
 
 .main__table-img img {
-  width: 474px;
+  
 }
 
 .main__table-info {
@@ -274,10 +287,10 @@
 .transformation__title {
   font-family: var(--font-family-1);
   font-size: 54px;
-  line-height: 120%;
   font-weight: 400;
   text-transform: uppercase;
-  max-width: 70%;
+  margin-bottom: 54px;
+  position: relative;
 }
 
 .transformation__subtitle {
@@ -285,17 +298,16 @@
   font-size: 20px;
   font-family: var(--font-family-2);
   text-transform: none;
-  white-space: wrap;
-}
-
-.transformation__subtitle {
+  position: absolute;
+  bottom: 13px;
+  left: 300px;
 }
 
 .transformation__grid {
   display: grid;
   position: relative;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 0.5fr);
   grid-column-gap: 20px;
   grid-row-gap: 20px;
   font-family: var(--font-family-2);
@@ -309,15 +321,16 @@
   background-position: center;
   background-repeat: no-repeat;
   padding: 20px;
-  display: flex;
+  display: inline-flex;
   gap: 20px;
+  align-items: flex-start;
 }
 
 .transformation__grid-item-number {
   background-color: var(--color-text-white);
-  padding: 3px 10px;
+  padding: 5px 12px;
   border-radius: 50%;
-  align-self: flex-start;
+  align-self: self-start;
 }
 
 .transformation__grid-item-text {
@@ -373,6 +386,7 @@
 }
 
 .slider__title {
+  font-family: var(--font-family-1);
   font-size: 54px;
   color: var(--color-text);
   text-transform: uppercase;
@@ -453,7 +467,7 @@
 .slider__line{
   display: flex;
   align-items: flex-start;
-  gap: 35px;
+  gap: 20px;
   transition: .5s all;
 }
 
@@ -472,6 +486,7 @@
 }
 
 .slider__card-name {
+  font-family: var(--font-family-2);
   font-size: 24px;
   font-weight: 600;
   color: var(--color-text);
@@ -483,18 +498,22 @@
   color: var(--color-text);
   opacity: 60%;
   margin-bottom: 20px;
+  font-size: 20px;
 }
 
 .slider__card-button {
+  font-family: var(--font-family-2);
   color: var(--color-text-href);
   font-weight: 500;
   background-color: transparent;
   border-radius: 62px;
+  border: 1px solid;
   border-color: var(--color-text-href);
   width: 113px;
   height: 35px;
   margin: 0 auto;
   transition: 0.3s all;
+  font-size: 16px;
 }
 
 .slider__card-button:hover {
