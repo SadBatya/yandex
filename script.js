@@ -1,3 +1,5 @@
+import { transformationSlider } from "./js/transformationSlider.js";
+
 const btnPrev = document.querySelector(".btn-left");
 const btnNext = document.querySelector(".btn-right");
 const curentNumberCard = document.querySelector(
@@ -36,3 +38,10 @@ btnPrev.addEventListener("click", () => {
 });
 
 updateBtnStatus();
+
+
+
+
+//slider 2
+
+transformationSlider()
