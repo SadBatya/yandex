@@ -100,18 +100,15 @@ a {
   border: none;
   transition: 0.3s all;
   cursor: pointer;
-}
-
-.header__button-black a {
   font-size: 16px;
   color: var(--color-text-white);
   font-family: var(--font-family-2);
+  text-align: center;
 }
+
 
 .header__button-black:hover {
   background-color: var(--color-button-hover);
-}
-.header__button-black:hover a {
   color: var(--color-button-default);
 }
 
@@ -124,17 +121,13 @@ a {
   background-color: transparent;
   transition: 0.3s all;
   cursor: pointer;
-}
-
-.header__button-transparent a {
   color: var(--color-text);
+  text-align: center;
+  font-family: var(--font-family-2);
 }
 
 .header__button-transparent:hover {
   background-color: var(--color-button-default);
-}
-
-.header__button-transparent:hover a {
   color: var(--color-text-white);
 }
 
