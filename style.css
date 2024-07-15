@@ -475,7 +475,6 @@ a {
 
 .slider__line {
   display: flex;
-  align-items: flex-start;
   gap: 20px;
   transition: 0.5s all;
 }
@@ -485,7 +484,7 @@ a {
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  min-width: 394px;
+  flex: 0 0 auto;
 }
 
 .slider__card-img {
